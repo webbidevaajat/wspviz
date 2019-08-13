@@ -1,11 +1,16 @@
 Package: wspviz
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Utilities for common WSP visualizations
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Arttu Kosonen
+Maintainer: Arttu Kosonen <arttu.kosonen@wsp.com>
+Description: This package currently includes color palette functions
+  by which one can avoid repeatedly looking for hex codes of
+  commonly used colors. In future, I plan to provide
+  other utilities as well such as WSP-styled ggplot2 themes.
+License: None
 Encoding: UTF-8
 LazyData: true
+Suggests: 
+    testthat (>= 2.1.0)
+RoxygenNote: 6.1.1
