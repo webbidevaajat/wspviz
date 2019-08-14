@@ -8,9 +8,11 @@ Description: This package currently includes color palette functions
   by which one can avoid repeatedly looking for hex codes of
   commonly used colors. In future, I plan to provide
   other utilities as well such as WSP-styled ggplot2 themes.
-License: None
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 
     testthat (>= 2.1.0)
 RoxygenNote: 6.1.1
+Imports: 
+    ggplot2
