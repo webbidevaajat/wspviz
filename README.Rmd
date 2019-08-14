@@ -1,0 +1,76 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# wspviz
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Utilities for common R visualization tasks at WSP Finland.
+Current features:
+
+- Color palettes for WSP and [HSL](https://hsl.fi/tyyliopas) colors
+
+Planned features:
+
+- Tailored `ggplot2` themes for WSP and other common contexts
+
+## Installation
+
+Ensure you have [`devtools`](https://github.com/r-lib/devtools) installed.
+To get the latest development version of `wspviz`,
+run the following command:
+
+``` r
+devtools::install_github("webbidevaajat/wspviz")
+```
+
+Current version depends on `ggplot2` library
+(because of `show_palettes()` function).
+
+## Examples
+
+Get all the HSL colors as a named vector:
+
+```{r example1, message=FALSE, warning=FALSE}
+library(wspviz)
+pal_hsl()
+```
+
+Get selected WSP colors:
+
+```{r example2, message=FALSE, warning=FALSE}
+library(wspviz)
+pal_wsp("red", "blue", "gray")
+```
+
+Plot a color palette:
+
+```{r example3, message=FALSE, warning=FALSE}
+library(wspviz)
+show_palette(pal_wsp())
+```
+
+If you are for some reason running the palette functions
+several times, say, generating 1000 different plots,
+you can extract the color codes and just use
+named vector subsetting for a slight performance benefit
+(comparison has not been made so far), like this:
+
+```{r example, message=FALSE, warning=FALSE}
+library(wspviz)
+pal <- pal_hsl()
+show_palette(pal[c("bus", "tram", "train", "metro", "ferry")])
+# Instead of show_palette(pal_wsp("purple", "midnightblue"))
+```
