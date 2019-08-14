@@ -33,7 +33,8 @@ show_palette <- function(pal) {
   p <- ggplot(df) +
     geom_tile(aes(x = ci, y = ri, fill = clrname),
               width = 0.8, height = 0.8) +
-    geom_label(aes(x = ci, y = ri, label = clrname)) +
+    geom_label(aes(x = ci, y = ri + 0.1, label = clrname)) +
+    geom_label(aes(x = ci, y = ri - 0.1, label = hexcode)) +
     scale_y_reverse() +
     scale_fill_manual(values = pal, guide = FALSE) +
     theme_void()
