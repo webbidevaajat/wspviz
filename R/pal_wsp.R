@@ -16,7 +16,7 @@ pal_wsp <- function(...) {
       name_engl = c("red", "lightred", "blue", "skyblue", "lightblue",
                     "steelblue", "midnightblue", "black", "gray",
                     "lightgray", "purple", "lightpurple"),
-        hexcode = c("f9423a", "f8a28c", "859f57", "a3cfea", "d8e6f0", "008eb9",
+        hexcode = c("f9423a", "f8a28c", "859fbb", "a3cfea", "d8e6f0", "008eb9",
                     "345f7e", "1e252b", "757679", "d9d9d6", "57439b",
                     "ccc2e0")
    )

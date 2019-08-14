@@ -2,3 +2,5 @@
 
 export(pal_hsl)
 export(pal_wsp)
+export(show_palette)
+import(ggplot2)
