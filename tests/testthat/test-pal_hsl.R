@@ -25,3 +25,13 @@ test_that("Returns colors with matching names only", {
   expect_equal(suppressWarnings(pal_hsl("bus", "tram", "light", "airplane")),
                c("bus" = "#007ac9", "tram" = "#00985f"))
 })
+
+test_that("Returns all without names if set so", {
+  expect_named(pal_hsl(with_names = FALSE),
+               NULL)
+})
+
+test_that("Returns filtered & without names if set so", {
+  expect_named(pal_hsl("lightpink", "yellow", with_names = FALSE),
+               NULL)
+})

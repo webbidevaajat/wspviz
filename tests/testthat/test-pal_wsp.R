@@ -25,3 +25,13 @@ test_that("Returns colors with matching names only", {
   expect_equal(suppressWarnings(pal_wsp("red", "skyblue", "light", "green")),
                c("red" = "#f9423a", "skyblue" = "#a3cfea"))
 })
+
+test_that("Returns all without names if set so", {
+  expect_named(pal_wsp(with_names = FALSE),
+               NULL)
+})
+
+test_that("Returns filtered & without names if set so", {
+  expect_named(pal_wsp("red", "skyblue", with_names = FALSE),
+               NULL)
+})
