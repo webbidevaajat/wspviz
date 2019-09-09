@@ -11,7 +11,7 @@ Utilities for common R visualization tasks at WSP Finland. Current features:
 
 Planned features:
 
--   Tailored `ggplot2` themes for WSP and other common contexts
+-   Tailored [`ggplot2`](https://github.com/tidyverse/ggplot2) themes for WSP and other common contexts
 
 Installation
 ------------
@@ -23,6 +23,13 @@ devtools::install_github("webbidevaajat/wspviz")
 ```
 
 Current version depends on `ggplot2` library (because of `show_palettes()` function).
+
+Functions currently
+-------------------
+
+-   `pal_wsp()`: standard WSP colors
+-   `pal_wsp2()`: strong WSP colors + some ad-hoc accent colors, meant for visualizations where several distinct colors are needed
+-   `pal_hsl()`: color palette defined by Helsinki Region Transport style guide
 
 Examples
 --------
@@ -80,3 +87,12 @@ show_palette(pal[c("bus", "tram", "train", "metro", "ferry")])
 ``` r
 # Instead of show_palette(pal_wsp("purple", "midnightblue"))
 ```
+
+Contributing
+------------
+
+If you have any ideas or questions, feel free to submit an issue or even make a pull request!
+
+### Author
+
+Arttu Kosonen ([datarttu](https://github.com/datarttu)), arttu (dot) kosonen (at) wsp (dot) com

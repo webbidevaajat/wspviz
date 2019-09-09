@@ -78,9 +78,9 @@ pal_wsp <- function(..., with_names = TRUE) {
 #' pal_wsp()
 pal_wsp2 <- function(..., with_names = TRUE) {
   colors_df <- data.frame(stringsAsFactors=FALSE,
-                          name_engl = c("red", "steelblue", "black", "purple",
+                          name_engl = c("red", "steelblue", "midnightblue", "black", "purple",
                                         "green", "pink", "gold"),
-                          hexcode = c("f9423a", "008eb9", "1e252b", "57439b",
+                          hexcode = c("f9423a", "008eb9", "345f7e", "1e252b", "57439b",
                                       "32a852", "a61689", "f9a339")
   )
   colors_df$hexcode <- paste0("#", colors_df$hexcode)
