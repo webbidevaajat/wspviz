@@ -63,13 +63,21 @@ library(wspviz)
 show_palette(pal_wsp())
 ```
 
+**NEW:** a palette with basic WSP colors + a couple of roughly matching
+accent colors:
+
+```{r example4, message=FALSE, warning=FALSE}
+library(wspviz)
+show_palette(pal_wsp2())
+```
+
 If you are for some reason running the palette functions
 several times, say, generating 1000 different plots,
 you can extract the color codes and just use
 named vector subsetting for a slight performance benefit
 (comparison has not been made so far), like this:
 
-```{r example, message=FALSE, warning=FALSE}
+```{r example5, message=FALSE, warning=FALSE}
 library(wspviz)
 pal <- pal_hsl()
 show_palette(pal[c("bus", "tram", "train", "metro", "ferry")])
